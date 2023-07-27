@@ -4,5 +4,7 @@
 <!-- The text below should describe exactly what resources are provisioned / configured by the example  -->
 
 An end-to-end basic example that will provision the following:
-- A new resource group if one is not passed in.
-- A new Cloud Object Storage instance.
+- A new IBM IAM access group
+- A new IBM IAM access group members
+- A new IBM IAM access group policy
+- A new IBM IAM access group dynamic rule

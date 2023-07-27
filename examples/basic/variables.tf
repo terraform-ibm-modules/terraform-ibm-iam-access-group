@@ -32,9 +32,9 @@ variable "dynamic_rules" {
       expiration        = 3
       identity_provider = "https://idp-test.example.org/SAML2"
       conditions = [{
-        claim    = "blueGroups"
+        claim    = "my_claim"
         operator = "CONTAINS"
-        value    = "test"
+        value    = "my_test_value"
       }]
     }
   }

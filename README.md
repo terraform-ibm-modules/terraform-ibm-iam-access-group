@@ -39,9 +39,28 @@ module "iam_service_access_group" {
   source            = "terraform-ibm-modules/terraform-ibm-iam-access-group"
   version           = "latest" # Replace "latest" with a release version to lock into a specific release
   access_group_name = "my-iam-access-group"
-  dynamic_rules     = var.dynamic_rules
-  policies          = var.policies
-  ibm_ids           = var.ibm_ids
+  dynamic_rules     = {
+                        rule-name = {
+                        expiration        = 3
+                        identity_provider = "https://idp-test.example.org/SAML2"
+                        conditions = [{
+                            claim    = "my_claim"
+                            operator = "CONTAINS"
+                            value    = "my_test_value"
+                        }]
+                        }
+                    }
+  policies          = {
+                        my_policy_1 = {
+                            roles = ["Viewer"]
+                            tags  = ["iam-service-policy-1"]
+                        }
+                        my_policy_2 = {
+                            roles = ["Viewer"]
+                            tags  = ["iam-service-policy-2"]
+                        }
+                    }
+  ibm_ids           = ["your_ibm_id_email"]
 }
 ```
 
