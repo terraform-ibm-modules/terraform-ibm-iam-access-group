@@ -1,4 +1,4 @@
-module github.com/terraform-ibm-modules/terraform-ibm-module-template
+module github.com/terraform-ibm-modules/terraform-ibm-iam-access-group
 
 go 1.20
 

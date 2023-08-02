@@ -1,12 +1,279 @@
 {
   "path": ".",
-  "variables": {},
-  "outputs": {},
+  "variables": {
+    "access_group_name": {
+      "name": "access_group_name",
+      "type": "string",
+      "description": "Name of the access group",
+      "required": true,
+      "source": [
+        "data.ibm_iam_access_group.access_group_data.access_group_name",
+        "ibm_iam_access_group.access_group.name"
+      ],
+      "pos": {
+        "filename": "variables.tf",
+        "line": 9
+      },
+      "cloud_data_type": "iam",
+      "cloud_data_range": [
+        "service:access_group",
+        "resolved_to:name"
+      ]
+    },
+    "add_members": {
+      "name": "add_members",
+      "type": "bool",
+      "description": "Enable this to add members to access group",
+      "default": true,
+      "source": [
+        "ibm_iam_access_group_members.access_group_members.count"
+      ],
+      "pos": {
+        "filename": "variables.tf",
+        "line": 20
+      }
+    },
+    "description": {
+      "name": "description",
+      "type": "string",
+      "description": "Description to access group",
+      "source": [
+        "ibm_iam_access_group.access_group.description"
+      ],
+      "pos": {
+        "filename": "variables.tf",
+        "line": 26
+      }
+    },
+    "dynamic_rules": {
+      "name": "dynamic_rules",
+      "type": "map(object({\n    expiration        = number\n    identity_provider = string\n    conditions = list(object({\n      claim    = string\n      operator = string\n      value    = string\n    }))\n  }))",
+      "description": "list of dynamic rules",
+      "required": true,
+      "source": [
+        "ibm_iam_access_group_dynamic_rule.access_group_dynamic_rule.for_each"
+      ],
+      "pos": {
+        "filename": "variables.tf",
+        "line": 85
+      }
+    },
+    "ibm_ids": {
+      "name": "ibm_ids",
+      "type": "list(string)",
+      "description": "A list of IBM IDs that you want to add to the access group.",
+      "source": [
+        "ibm_iam_access_group_members.access_group_members.ibm_ids"
+      ],
+      "pos": {
+        "filename": "variables.tf",
+        "line": 42
+      },
+      "elem": {
+        "type": "TypeString"
+      }
+    },
+    "policies": {
+      "name": "policies",
+      "type": "map(object({\n    roles              = list(string)\n    account_management = optional(bool)\n    tags               = set(string)\n    resources = optional(list(object({\n      region               = optional(string)\n      attributes           = optional(map(string))\n      service              = optional(string)\n      resource_instance_id = optional(string)\n      resource_type        = optional(string)\n      resource             = optional(string)\n      resource_group_id    = optional(string)\n    })))\n    resource_attributes = optional(list(object({\n      name     = string\n      value    = string\n      operator = optional(string)\n    })))\n  }))",
+      "description": "list of policies",
+      "required": true,
+      "source": [
+        "ibm_iam_access_group_policy.policy.for_each"
+      ],
+      "pos": {
+        "filename": "variables.tf",
+        "line": 58
+      }
+    },
+    "provision": {
+      "name": "provision",
+      "type": "bool",
+      "description": "Would you like to provision a new access group (true/false)",
+      "default": true,
+      "required": true,
+      "source": [
+        "data.ibm_iam_access_group.access_group_data.count",
+        "ibm_iam_access_group.access_group.count",
+        "ibm_iam_access_group_dynamic_rule.access_group_dynamic_rule.access_group_id",
+        "ibm_iam_access_group_members.access_group_members.access_group_id",
+        "ibm_iam_access_group_policy.policy.access_group_id"
+      ],
+      "pos": {
+        "filename": "variables.tf",
+        "line": 14
+      },
+      "cloud_data_type": "iam",
+      "immutable": true,
+      "cloud_data_range": [
+        "service:access_group",
+        "resolved_to:id"
+      ]
+    },
+    "service_ids": {
+      "name": "service_ids",
+      "type": "list(string)",
+      "description": "A list of service IDS that you want to add to the access group.",
+      "source": [
+        "ibm_iam_access_group_members.access_group_members.iam_service_ids"
+      ],
+      "pos": {
+        "filename": "variables.tf",
+        "line": 48
+      },
+      "elem": {
+        "type": "TypeString"
+      }
+    },
+    "tags": {
+      "name": "tags",
+      "type": "list(string)",
+      "description": "Tags that should be applied to the service",
+      "source": [
+        "ibm_iam_access_group.access_group.tags"
+      ],
+      "pos": {
+        "filename": "variables.tf",
+        "line": 32
+      },
+      "cloud_data_type": "tags",
+      "elem": {
+        "type": "TypeString"
+      }
+    }
+  },
+  "outputs": {
+    "dynamic_rule_ids": {
+      "name": "dynamic_rule_ids",
+      "description": "List of access group dynamic rule IDs",
+      "pos": {
+        "filename": "outputs.tf",
+        "line": 10
+      }
+    },
+    "id": {
+      "name": "id",
+      "description": "The ID of the access group",
+      "pos": {
+        "filename": "outputs.tf",
+        "line": 5
+      }
+    },
+    "member_id": {
+      "name": "member_id",
+      "description": "The unique identifier of the access group members.",
+      "pos": {
+        "filename": "outputs.tf",
+        "line": 17
+      }
+    },
+    "policy_ids": {
+      "name": "policy_ids",
+      "description": "List of access group policy IDs",
+      "pos": {
+        "filename": "outputs.tf",
+        "line": 22
+      }
+    }
+  },
   "required_core": [
     "\u003e= 1.3.0"
   ],
-  "required_providers": {},
-  "managed_resources": {},
-  "data_resources": {},
+  "required_providers": {
+    "ibm": {
+      "source": "ibm-cloud/ibm",
+      "version_constraints": [
+        "\u003e= 1.51.0"
+      ]
+    }
+  },
+  "managed_resources": {
+    "ibm_iam_access_group.access_group": {
+      "mode": "managed",
+      "type": "ibm_iam_access_group",
+      "name": "access_group",
+      "attributes": {
+        "count": "provision",
+        "description": "description",
+        "name": "access_group_name",
+        "tags": "tags"
+      },
+      "provider": {
+        "name": "ibm"
+      },
+      "pos": {
+        "filename": "main.tf",
+        "line": 5
+      }
+    },
+    "ibm_iam_access_group_dynamic_rule.access_group_dynamic_rule": {
+      "mode": "managed",
+      "type": "ibm_iam_access_group_dynamic_rule",
+      "name": "access_group_dynamic_rule",
+      "attributes": {
+        "access_group_id": "provision",
+        "for_each": "dynamic_rules"
+      },
+      "provider": {
+        "name": "ibm"
+      },
+      "pos": {
+        "filename": "main.tf",
+        "line": 56
+      }
+    },
+    "ibm_iam_access_group_members.access_group_members": {
+      "mode": "managed",
+      "type": "ibm_iam_access_group_members",
+      "name": "access_group_members",
+      "attributes": {
+        "access_group_id": "provision",
+        "count": "add_members",
+        "iam_service_ids": "service_ids",
+        "ibm_ids": "ibm_ids"
+      },
+      "provider": {
+        "name": "ibm"
+      },
+      "pos": {
+        "filename": "main.tf",
+        "line": 17
+      }
+    },
+    "ibm_iam_access_group_policy.policy": {
+      "mode": "managed",
+      "type": "ibm_iam_access_group_policy",
+      "name": "policy",
+      "attributes": {
+        "access_group_id": "provision",
+        "for_each": "policies"
+      },
+      "provider": {
+        "name": "ibm"
+      },
+      "pos": {
+        "filename": "main.tf",
+        "line": 24
+      }
+    }
+  },
+  "data_resources": {
+    "data.ibm_iam_access_group.access_group_data": {
+      "mode": "data",
+      "type": "ibm_iam_access_group",
+      "name": "access_group_data",
+      "attributes": {
+        "access_group_name": "access_group_name",
+        "count": "provision"
+      },
+      "provider": {
+        "name": "ibm"
+      },
+      "pos": {
+        "filename": "main.tf",
+        "line": 12
+      }
+    }
+  },
   "module_calls": {}
 }

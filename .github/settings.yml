@@ -7,23 +7,11 @@
 #
 _extends: repo-settings:.github/common-settings-v2.yml
 
-# repo-specific settings
-#
 repository:
-  # See https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines?id=module-names-and-descriptions
-
   # By changing this field, you rename the repository.
-
-  # Uncomment this name property and set the name to the current repo name.
-  # name: ""
+  name: "terraform-ibm-iam-access-group"
 
   # The description is displayed under the repository name on the
   # organization page and in the 'About' section of the repository.
-
-  # Uncomment this description property
-  # and update the description to the current repo description.
-  # description: ""
-
-  # Uncomment this topics property
-  # and add a comma-separated list of topics to set on the repo.
-  # topics: terraform, ibm-cloud, terraform-module
+  description: "This module is used to create an acess group, adding members to access group, defining the acces group policy and adding dynamic rules to access group."
+  topics: terraform, ibm-cloud, terraform-module, iam, access-group, core-team
