@@ -19,6 +19,10 @@ func setupOptions(t *testing.T, prefix string, dir string) *testhelper.TestOptio
 		Prefix:        prefix,
 		ResourceGroup: resourceGroup,
 	})
+
+	options.TerraformVars = map[string]interface{}{
+		"prefix": options.Prefix,
+	}
 	return options
 }
 
@@ -33,7 +37,6 @@ func TestRunBasicExample(t *testing.T) {
 }
 
 func TestRunBasicUpgradeExample(t *testing.T) {
-	t.Skip()
 	t.Parallel()
 
 	options := setupOptions(t, "iam-access-g-upg", basicExampleDir)
