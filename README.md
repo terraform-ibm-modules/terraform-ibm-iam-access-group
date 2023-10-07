@@ -16,8 +16,6 @@ This module is used to create an acess group, adding members to access group, de
 * [Examples](./examples)
     * [Basic example](./examples/basic)
 * [Contributing](#contributing)
-
-## terraform-ibm-iam-access-group
 <!-- END OVERVIEW HOOK -->
 
 ### Usage
