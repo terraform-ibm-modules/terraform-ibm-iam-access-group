@@ -421,7 +421,7 @@ variable "admin_compute_ag_policies" {
       tags = []
     }
     "is.instance" = {
-      roles = ["Administrator", "Console Administrator"]
+      roles = ["Administrator"]
       resources = [{
         services = "is.instance"
       }]
@@ -442,7 +442,7 @@ variable "admin_compute_ag_policies" {
       tags = []
     }
     "is.bare-metal-server" = {
-      roles = ["Administrator", "Console Administrator"]
+      roles = ["Administrator"]
       resources = [{
         services = "is.bare-metal-server"
       }]

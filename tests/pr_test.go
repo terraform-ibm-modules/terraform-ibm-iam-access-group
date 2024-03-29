@@ -12,7 +12,7 @@ import (
 // Use existing resource group
 const resourceGroup = "geretain-test-resources"
 const basicExampleDir = "examples/basic"
-const daDir = "solutions/access-group"
+const daDir = "solutions/access-management"
 
 func setupOptions(t *testing.T, prefix string, dir string) *testhelper.TestOptions {
 	options := testhelper.TestOptionsDefault(&testhelper.TestOptions{

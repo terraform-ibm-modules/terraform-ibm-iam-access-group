@@ -1,4 +1,4 @@
-# IBM Cloud Access Group solution
+# IBM Cloud Access Management solution
 
 An end-to-end deployable architecture solution that will provision the following:
 
