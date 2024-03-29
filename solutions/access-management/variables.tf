@@ -563,7 +563,7 @@ variable "privileged_observability_ag_policies" {
       tags = []
     }
     "logdna" = {
-      roles = ["Editor", "Writer"]
+      roles = ["Editor", "Standard Member"]
       resources = [{
         service = "logdna"
       }]
@@ -1061,20 +1061,20 @@ variable "observer_observability_ag_policies" {
   description = "A map of policies for the Observer Observability access group, has a set of default policies that can be overridden"
   default = {
     "atracker" = {
-      roles = ["Viewer", "Reader"]
+      roles = ["Viewer"]
       resources = [{
         service = "atracker"
       }]
       tags = []
     }
-    "observability" = {
+    "monitoring" = {
       roles = ["Viewer", "Reader"]
       resources = [{
         service = "sysdig-monitor"
       }]
       tags = []
     }
-    "logdna" = {
+    "logging" = {
       roles = ["Viewer", "Reader"]
       resources = [{
         service = "logdna"
