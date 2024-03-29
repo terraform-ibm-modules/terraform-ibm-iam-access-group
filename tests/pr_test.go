@@ -91,6 +91,8 @@ func TestRunDAUpgrade(t *testing.T) {
 	options := setupDAOptions(t, "ag-upg-solution", daDir)
 
 	output, err := options.RunTestUpgrade()
-	assert.Nil(t, err, "This should not have errored")
-	assert.NotNil(t, output, "Expected some output")
+	if !options.UpgradeTestSkipped {
+		assert.Nil(t, err, "This should not have errored")
+		assert.NotNil(t, output, "Expected some output")
+	}
 }
