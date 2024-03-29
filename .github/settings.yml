@@ -14,4 +14,4 @@ repository:
   # The description is displayed under the repository name on the
   # organization page and in the 'About' section of the repository.
   description: "This module is used to create an acess group, adding members to access group, defining the acces group policy and adding dynamic rules to access group."
-  topics: terraform, ibm-cloud, terraform-module, iam, access-group, core-team, supported, graduated
+  topics: terraform, ibm-cloud, terraform-module, iam, access-group, core-team, supported, graduated, deployable-architecture
