@@ -51,7 +51,11 @@ func TestRunBasicUpgradeExample(t *testing.T) {
 }
 
 func setupDAOptions(t *testing.T, prefix string, dir string) *testhelper.TestOptions {
-	options := setupOptions(t, prefix, dir)
+	options := testhelper.TestOptionsDefault(&testhelper.TestOptions{
+		Testing:      t,
+		TerraformDir: dir,
+		Prefix:       prefix,
+	})
 
 	options.TerraformVars["admin_observability_ag_name"] = fmt.Sprintf("%s-admin-obs", options.Prefix)
 	options.TerraformVars["admin_network_ag_name"] = fmt.Sprintf("%s-admin-net", options.Prefix)
