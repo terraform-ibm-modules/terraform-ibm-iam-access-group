@@ -57,18 +57,20 @@ func setupDAOptions(t *testing.T, prefix string, dir string) *testhelper.TestOpt
 		Prefix:       prefix,
 	})
 
-	options.TerraformVars["admin_observability_ag_name"] = fmt.Sprintf("%s-admin-obs", options.Prefix)
-	options.TerraformVars["admin_network_ag_name"] = fmt.Sprintf("%s-admin-net", options.Prefix)
-	options.TerraformVars["admin_security_ag_name"] = fmt.Sprintf("%s-admin-sec", options.Prefix)
-	options.TerraformVars["admin_compute_ag_name"] = fmt.Sprintf("%s-admin-comp", options.Prefix)
-	options.TerraformVars["privileged_observability_ag_name"] = fmt.Sprintf("%s-priv-obs", options.Prefix)
-	options.TerraformVars["privileged_network_ag_name"] = fmt.Sprintf("%s-priv-net", options.Prefix)
-	options.TerraformVars["privileged_security_ag_name"] = fmt.Sprintf("%s-priv-sec", options.Prefix)
-	options.TerraformVars["privileged_compute_ag_name"] = fmt.Sprintf("%s-priv-comp", options.Prefix)
-	options.TerraformVars["observer_observability_ag_name"] = fmt.Sprintf("%s-obsrv-obs", options.Prefix)
-	options.TerraformVars["observer_network_ag_name"] = fmt.Sprintf("%s-obsrv-net", options.Prefix)
-	options.TerraformVars["observer_security_ag_name"] = fmt.Sprintf("%s-obsrv-sec", options.Prefix)
-	options.TerraformVars["observer_compute_ag_name"] = fmt.Sprintf("%s-obsrv-comp", options.Prefix)
+	options.TerraformVars = map[string]interface{}{
+		"admin_observability_ag_name":      fmt.Sprintf("%s-admin-obs", options.Prefix),
+		"admin_network_ag_name":            fmt.Sprintf("%s-admin-net", options.Prefix),
+		"admin_security_ag_name":           fmt.Sprintf("%s-admin-sec", options.Prefix),
+		"admin_compute_ag_name":            fmt.Sprintf("%s-admin-comp", options.Prefix),
+		"privileged_observability_ag_name": fmt.Sprintf("%s-priv-obs", options.Prefix),
+		"privileged_network_ag_name":       fmt.Sprintf("%s-priv-net", options.Prefix),
+		"privileged_security_ag_name":      fmt.Sprintf("%s-priv-sec", options.Prefix),
+		"privileged_compute_ag_name":       fmt.Sprintf("%s-priv-comp", options.Prefix),
+		"observer_observability_ag_name":   fmt.Sprintf("%s-obsrv-obs", options.Prefix),
+		"observer_network_ag_name":         fmt.Sprintf("%s-obsrv-net", options.Prefix),
+		"observer_security_ag_name":        fmt.Sprintf("%s-obsrv-sec", options.Prefix),
+		"observer_compute_ag_name":         fmt.Sprintf("%s-obsrv-comp", options.Prefix),
+	}
 
 	return options
 }
