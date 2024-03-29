@@ -2,6 +2,7 @@
 package test
 
 import (
+	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -49,10 +50,29 @@ func TestRunBasicUpgradeExample(t *testing.T) {
 	}
 }
 
+func setupDAOptions(t *testing.T, prefix string, dir string) *testhelper.TestOptions {
+	options := setupOptions(t, prefix, dir)
+
+	options.TerraformVars["admin_observability_ag_name"] = fmt.Sprintf("%s-admin-obs", options.Prefix)
+	options.TerraformVars["admin_network_ag_name"] = fmt.Sprintf("%s-admin-net", options.Prefix)
+	options.TerraformVars["admin_security_ag_name"] = fmt.Sprintf("%s-admin-sec", options.Prefix)
+	options.TerraformVars["admin_compute_ag_name"] = fmt.Sprintf("%s-admin-comp", options.Prefix)
+	options.TerraformVars["privileged_observability_ag_name"] = fmt.Sprintf("%s-priv-obs", options.Prefix)
+	options.TerraformVars["privileged_network_ag_name"] = fmt.Sprintf("%s-priv-net", options.Prefix)
+	options.TerraformVars["privileged_security_ag_name"] = fmt.Sprintf("%s-priv-sec", options.Prefix)
+	options.TerraformVars["privileged_compute_ag_name"] = fmt.Sprintf("%s-priv-comp", options.Prefix)
+	options.TerraformVars["observer_observability_ag_name"] = fmt.Sprintf("%s-obsrv-obs", options.Prefix)
+	options.TerraformVars["observer_network_ag_name"] = fmt.Sprintf("%s-obsrv-net", options.Prefix)
+	options.TerraformVars["observer_security_ag_name"] = fmt.Sprintf("%s-obsrv-sec", options.Prefix)
+	options.TerraformVars["observer_compute_ag_name"] = fmt.Sprintf("%s-obsrv-comp", options.Prefix)
+
+	return options
+}
+
 func TestRunDA(t *testing.T) {
 	t.Parallel()
 
-	options := setupOptions(t, "ag-solution", daDir)
+	options := setupDAOptions(t, "ag-solution", daDir)
 
 	output, err := options.RunTestConsistency()
 	assert.Nil(t, err, "This should not have errored")
@@ -62,7 +82,7 @@ func TestRunDA(t *testing.T) {
 func TestRunDAUpgrade(t *testing.T) {
 	t.Parallel()
 
-	options := setupOptions(t, "ag-upg-solution", daDir)
+	options := setupDAOptions(t, "ag-upg-solution", daDir)
 
 	output, err := options.RunTestUpgrade()
 	assert.Nil(t, err, "This should not have errored")
