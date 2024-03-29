@@ -68,15 +68,15 @@
             }
           ],
           "architecture": {
-            "descriptions": "This architecture supports creating and configuring the base layer components of an IBM Cloud account.",
+            "descriptions": "This architecture supports creating and configuring the access groups of an IBM Cloud account.",
             "diagrams": [
               {
                 "diagram": {
                   "caption": "Account Infrastructure Base",
-                  "url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-account-infrastructure-base/main/reference-architectures/base-account-enterprise.svg",
+                  "url": "https://github.com/terraform-ibm-modules/terraform-ibm-iam-access-group/blob/solution/reference-architectures/access-groups.svg",
                   "type": "image/svg+xml"
                 },
-                "description": "This architecture supports creating and configuring the base layer components of an IBM Cloud account."
+                "description": "This architecture supports creating and configuring the access groups of an IBM Cloud account."
               }
             ]
           }
