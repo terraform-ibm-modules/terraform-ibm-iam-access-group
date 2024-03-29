@@ -409,63 +409,63 @@ variable "admin_compute_ag_policies" {
     "codeengine" = {
       roles = ["Administrator", "Manager"]
       resources = [{
-        services = "codeengine"
+        service = "codeengine"
       }]
       tags = []
     }
     "containers-kubernetes" = {
       roles = ["Administrator", "Manager"]
       resources = [{
-        services = "containers-kubernetes"
+        service = "containers-kubernetes"
       }]
       tags = []
     }
     "is.instance" = {
       roles = ["Administrator"]
       resources = [{
-        services = "is.instance"
+        service = "is.instance"
       }]
       tags = []
     }
     "is.instance-group" = {
       roles = ["Administrator"]
       resources = [{
-        services = "is.instance-group"
+        service = "is.instance-group"
       }]
       tags = []
     }
     "is.key" = {
       roles = ["Administrator"]
       resources = [{
-        services = "is.key"
+        service = "is.key"
       }]
       tags = []
     }
     "is.bare-metal-server" = {
       roles = ["Administrator"]
       resources = [{
-        services = "is.bare-metal-server"
+        service = "is.bare-metal-server"
       }]
       tags = []
     }
     "is.dedicated-host" = {
       roles = ["Administrator"]
       resources = [{
-        services = "is.dedicated-host"
+        service = "is.dedicated-host"
       }]
       tags = []
     }
     "is.image" = {
       roles = ["Administrator", "Manager"]
       resources = [{
-        services = "is.image"
+        service = "is.image"
       }]
       tags = []
     }
     "is.reservation" = {
       roles = ["Administrator"]
       resources = [{
-        services = "is.reservation"
+        service = "is.reservation"
       }]
       tags = []
     }
@@ -921,63 +921,63 @@ variable "privileged_compute_ag_policies" {
     "codeengine" = {
       roles = ["Editor", "Writer"]
       resources = [{
-        services = "codeengine"
+        service = "codeengine"
       }]
       tags = []
     }
     "containers-kubernetes" = {
       roles = ["Editor", "Writer"]
       resources = [{
-        services = "containers-kubernetes"
+        service = "containers-kubernetes"
       }]
       tags = []
     }
     "is.instance" = {
       roles = ["Editor"]
       resources = [{
-        services = "is.instance"
+        service = "is.instance"
       }]
       tags = []
     }
     "is.instance-group" = {
       roles = ["Editor"]
       resources = [{
-        services = "is.instance-group"
+        service = "is.instance-group"
       }]
       tags = []
     }
     "is.key" = {
       roles = ["Editor"]
       resources = [{
-        services = "is.key"
+        service = "is.key"
       }]
       tags = []
     }
     "is.bare-metal-server" = {
       roles = ["Editor"]
       resources = [{
-        services = "is.bare-metal-server"
+        service = "is.bare-metal-server"
       }]
       tags = []
     }
     "is.dedicated-host" = {
       roles = ["Editor"]
       resources = [{
-        services = "is.dedicated-host"
+        service = "is.dedicated-host"
       }]
       tags = []
     }
     "is.image" = {
       roles = ["Editor", "Writer"]
       resources = [{
-        services = "is.image"
+        service = "is.image"
       }]
       tags = []
     }
     "is.reservation" = {
       roles = ["Editor"]
       resources = [{
-        services = "is.reservation"
+        service = "is.reservation"
       }]
       tags = []
     }
@@ -1433,63 +1433,63 @@ variable "observer_compute_ag_policies" {
     "codeengine" = {
       roles = ["Viewer", "Reader"]
       resources = [{
-        services = "codeengine"
+        service = "codeengine"
       }]
       tags = []
     }
     "containers-kubernetes" = {
       roles = ["Viewer", "Reader"]
       resources = [{
-        services = "containers-kubernetes"
+        service = "containers-kubernetes"
       }]
       tags = []
     }
     "is.instance" = {
       roles = ["Viewer"]
       resources = [{
-        services = "is.instance"
+        service = "is.instance"
       }]
       tags = []
     }
     "is.instance-group" = {
       roles = ["Viewer"]
       resources = [{
-        services = "is.instance-group"
+        service = "is.instance-group"
       }]
       tags = []
     }
     "is.key" = {
       roles = ["Viewer"]
       resources = [{
-        services = "is.key"
+        service = "is.key"
       }]
       tags = []
     }
     "is.bare-metal-server" = {
       roles = ["Viewer"]
       resources = [{
-        services = "is.bare-metal-server"
+        service = "is.bare-metal-server"
       }]
       tags = []
     }
     "is.dedicated-host" = {
       roles = ["Viewer"]
       resources = [{
-        services = "is.dedicated-host"
+        service = "is.dedicated-host"
       }]
       tags = []
     }
     "is.image" = {
       roles = ["Viewer"]
       resources = [{
-        services = "is.image"
+        service = "is.image"
       }]
       tags = []
     }
     "is.reservation" = {
       roles = ["Viewer"]
       resources = [{
-        services = "is.reservation"
+        service = "is.reservation"
       }]
       tags = []
     }
