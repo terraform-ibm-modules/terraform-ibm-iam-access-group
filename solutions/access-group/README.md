@@ -9,4 +9,4 @@ An end-to-end deployable architecture solution that will provision the following
   - Compute
 - Custom roles for tailoring access to services
 
-<!-- ![iam-access-group](../../reference-architectures/iam-access-group.svg) -->
+![iam-access-group](../../reference-architectures/iam-access-group.svg)
