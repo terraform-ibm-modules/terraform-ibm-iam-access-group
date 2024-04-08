@@ -5,7 +5,7 @@
 resource "ibm_iam_access_group" "access_group" {
   count       = var.provision ? 1 : 0
   name        = var.access_group_name
-  description = var.description != null
+  description = var.description
   tags        = var.tags
 }
 
