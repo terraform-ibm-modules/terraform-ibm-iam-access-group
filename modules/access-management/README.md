@@ -1,4 +1,4 @@
-# IBM Cloud Access Management solution
+# IBM Cloud Access Management module
 
 A module that will provision the following:
 
