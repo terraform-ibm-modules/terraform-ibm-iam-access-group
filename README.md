@@ -13,6 +13,8 @@ This module is used to create an acess group, adding members to access group, de
 <!-- BEGIN OVERVIEW HOOK -->
 ## Overview
 * [terraform-ibm-iam-access-group](#terraform-ibm-iam-access-group)
+* [Submodules](./modules)
+    * [access-management](./modules/access-management)
 * [Examples](./examples)
     * [Basic example](./examples/basic)
 * [Contributing](#contributing)

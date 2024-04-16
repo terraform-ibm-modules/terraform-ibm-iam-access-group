@@ -12,7 +12,7 @@ import (
 // Use existing resource group
 const resourceGroup = "geretain-test-resources"
 const basicExampleDir = "examples/basic"
-const daDir = "solutions/access-management"
+const daDir = "modules/access-management"
 
 func setupOptions(t *testing.T, prefix string, dir string) *testhelper.TestOptions {
 	options := testhelper.TestOptionsDefault(&testhelper.TestOptions{
@@ -38,7 +38,7 @@ func TestRunBasicExample(t *testing.T) {
 	assert.NotNil(t, output, "Expected some output")
 }
 
-func setupDAOptions(t *testing.T, prefix string, dir string) *testhelper.TestOptions {
+func setupModuleOptions(t *testing.T, prefix string, dir string) *testhelper.TestOptions {
 	options := testhelper.TestOptionsDefault(&testhelper.TestOptions{
 		Testing:      t,
 		TerraformDir: dir,
@@ -63,20 +63,20 @@ func setupDAOptions(t *testing.T, prefix string, dir string) *testhelper.TestOpt
 	return options
 }
 
-func TestRunDA(t *testing.T) {
+func TestRunModule(t *testing.T) {
 	t.Parallel()
 
-	options := setupDAOptions(t, "ag-solution", daDir)
+	options := setupModuleOptions(t, "ag-solution", daDir)
 
 	output, err := options.RunTestConsistency()
 	assert.Nil(t, err, "This should not have errored")
 	assert.NotNil(t, output, "Expected some output")
 }
 
-func TestRunDAUpgrade(t *testing.T) {
+func TestRunModuleUpgrade(t *testing.T) {
 	t.Parallel()
 
-	options := setupDAOptions(t, "ag-upg-solution", daDir)
+	options := setupModuleOptions(t, "ag-upg-solution", daDir)
 
 	output, err := options.RunTestUpgrade()
 	if !options.UpgradeTestSkipped {
