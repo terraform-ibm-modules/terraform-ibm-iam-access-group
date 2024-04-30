@@ -2,7 +2,6 @@
 package test
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -12,7 +11,7 @@ import (
 // Use existing resource group
 const resourceGroup = "geretain-test-resources"
 const basicExampleDir = "examples/basic"
-const daDir = "modules/access-management"
+const moduleExampleDir = "examples/access-management"
 
 func setupOptions(t *testing.T, prefix string, dir string) *testhelper.TestOptions {
 	options := testhelper.TestOptionsDefault(&testhelper.TestOptions{
@@ -46,18 +45,7 @@ func setupModuleOptions(t *testing.T, prefix string, dir string) *testhelper.Tes
 	})
 
 	options.TerraformVars = map[string]interface{}{
-		"admin_observability_ag_name":      fmt.Sprintf("%s-admin-obs", options.Prefix),
-		"admin_network_ag_name":            fmt.Sprintf("%s-admin-net", options.Prefix),
-		"admin_security_ag_name":           fmt.Sprintf("%s-admin-sec", options.Prefix),
-		"admin_compute_ag_name":            fmt.Sprintf("%s-admin-comp", options.Prefix),
-		"privileged_observability_ag_name": fmt.Sprintf("%s-priv-obs", options.Prefix),
-		"privileged_network_ag_name":       fmt.Sprintf("%s-priv-net", options.Prefix),
-		"privileged_security_ag_name":      fmt.Sprintf("%s-priv-sec", options.Prefix),
-		"privileged_compute_ag_name":       fmt.Sprintf("%s-priv-comp", options.Prefix),
-		"observer_observability_ag_name":   fmt.Sprintf("%s-obsrv-obs", options.Prefix),
-		"observer_network_ag_name":         fmt.Sprintf("%s-obsrv-net", options.Prefix),
-		"observer_security_ag_name":        fmt.Sprintf("%s-obsrv-sec", options.Prefix),
-		"observer_compute_ag_name":         fmt.Sprintf("%s-obsrv-comp", options.Prefix),
+		"prefix": options.Prefix,
 	}
 
 	return options
@@ -66,7 +54,7 @@ func setupModuleOptions(t *testing.T, prefix string, dir string) *testhelper.Tes
 func TestRunModule(t *testing.T) {
 	t.Parallel()
 
-	options := setupModuleOptions(t, "ag-solution", daDir)
+	options := setupModuleOptions(t, "ag-module", moduleExampleDir)
 
 	output, err := options.RunTestConsistency()
 	assert.Nil(t, err, "This should not have errored")
@@ -76,7 +64,7 @@ func TestRunModule(t *testing.T) {
 func TestRunModuleUpgrade(t *testing.T) {
 	t.Parallel()
 
-	options := setupModuleOptions(t, "ag-upg-solution", daDir)
+	options := setupModuleOptions(t, "ag-upg-module", moduleExampleDir)
 
 	output, err := options.RunTestUpgrade()
 	if !options.UpgradeTestSkipped {

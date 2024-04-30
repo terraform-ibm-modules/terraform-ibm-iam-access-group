@@ -1533,15 +1533,3 @@ variable "observer_compute_ag_service_ids" {
   description = "A list of Service IDs you want to add to the observer compute access group"
   default     = null
 }
-
-variable "custom_roles" {
-  description = "IAM custom roles for Access Groups"
-  type = list(object({
-    name         = string
-    service      = string
-    display_name = string
-    actions      = list(string)
-    description  = optional(string, "")
-  }))
-  default = []
-}
