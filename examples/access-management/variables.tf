@@ -1,14 +1,13 @@
 variable "ibmcloud_api_key" {
   type        = string
   description = "Restricted IBM Cloud API Key used only for writing Log Analysis archives to Cloud Object Storage"
-  default     = null
   sensitive   = true
 }
 
 variable "prefix" {
   type        = string
   description = "(Optional) Prefix to append to all access groups in the example."
-  default     = null
+  default     = "access-management"
 }
 
 variable "admin_observability_ag_name" {

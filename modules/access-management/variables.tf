@@ -82,7 +82,7 @@ variable "admin_observability_ag_description" {
 
 variable "admin_observability_ag_tags" {
   type        = list(string)
-  description = "Tags that should be applied to the service"
+  description = "The list of tags that you want to associated with your admin observability access group"
   default     = []
 }
 
@@ -189,7 +189,7 @@ variable "admin_security_ag_description" {
 
 variable "admin_security_ag_tags" {
   type        = list(string)
-  description = "Tags that should be applied to the service"
+  description = "The list of tags that you want to associated with your admin security access group"
   default     = null
 }
 
@@ -352,7 +352,7 @@ variable "admin_network_ag_description" {
 
 variable "admin_network_ag_tags" {
   type        = list(string)
-  description = "Tags that should be applied to the service"
+  description = "The list of tags that you want to associated with your admin network access group"
   default     = null
 }
 
@@ -494,7 +494,7 @@ variable "admin_compute_ag_description" {
 
 variable "admin_compute_ag_tags" {
   type        = list(string)
-  description = "Tags that should be applied to the service"
+  description = "The list of tags that you want to associated with your admin compute access group"
   default     = null
 }
 
@@ -594,7 +594,7 @@ variable "privileged_observability_ag_description" {
 
 variable "privileged_observability_ag_tags" {
   type        = list(string)
-  description = "Tags that should be applied to the service"
+  description = "The list of tags that you want to associated with your privileged observability access group"
   default     = null
 }
 
@@ -701,7 +701,7 @@ variable "privileged_security_ag_description" {
 
 variable "privileged_security_ag_tags" {
   type        = list(string)
-  description = "Tags that should be applied to the service"
+  description = "The list of tags that you want to associated with your privileged security access group"
   default     = null
 }
 
@@ -864,7 +864,7 @@ variable "privileged_network_ag_description" {
 
 variable "privileged_network_ag_tags" {
   type        = list(string)
-  description = "Tags that should be applied to the service"
+  description = "The list of tags that you want to associated with your privileged network access group"
   default     = null
 }
 
@@ -1006,7 +1006,7 @@ variable "privileged_compute_ag_description" {
 
 variable "privileged_compute_ag_tags" {
   type        = list(string)
-  description = "Tags that should be applied to the service"
+  description = "The list of tags that you want to associated with your privileged compute access group"
   default     = null
 }
 
@@ -1106,7 +1106,7 @@ variable "observer_observability_ag_description" {
 
 variable "observer_observability_ag_tags" {
   type        = list(string)
-  description = "Tags that should be applied to the service"
+  description = "The list of tags that you want to associated with your observer observability access group"
   default     = null
 }
 
@@ -1213,7 +1213,7 @@ variable "observer_security_ag_description" {
 
 variable "observer_security_ag_tags" {
   type        = list(string)
-  description = "Tags that should be applied to the service"
+  description = "The list of tags that you want to associated with your observer security access group"
   default     = null
 }
 
@@ -1376,7 +1376,7 @@ variable "observer_network_ag_description" {
 
 variable "observer_network_ag_tags" {
   type        = list(string)
-  description = "Tags that should be applied to the service"
+  description = "The list of tags that you want to associated with your observer network access group"
   default     = null
 }
 
@@ -1518,7 +1518,7 @@ variable "observer_compute_ag_description" {
 
 variable "observer_compute_ag_tags" {
   type        = list(string)
-  description = "Tags that should be applied to the service"
+  description = "The list of tags that you want to associated with your observer compute access group"
   default     = null
 }
 
