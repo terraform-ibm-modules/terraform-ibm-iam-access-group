@@ -11,6 +11,7 @@ import (
 // Use existing resource group
 const resourceGroup = "geretain-test-resources"
 const basicExampleDir = "examples/basic"
+const moduleExampleDir = "examples/access-management"
 
 func setupOptions(t *testing.T, prefix string, dir string) *testhelper.TestOptions {
 	options := testhelper.TestOptionsDefault(&testhelper.TestOptions{
@@ -36,10 +37,34 @@ func TestRunBasicExample(t *testing.T) {
 	assert.NotNil(t, output, "Expected some output")
 }
 
-func TestRunBasicUpgradeExample(t *testing.T) {
+func setupModuleOptions(t *testing.T, prefix string, dir string) *testhelper.TestOptions {
+	options := testhelper.TestOptionsDefault(&testhelper.TestOptions{
+		Testing:      t,
+		TerraformDir: dir,
+		Prefix:       prefix,
+	})
+
+	options.TerraformVars = map[string]interface{}{
+		"prefix": options.Prefix,
+	}
+
+	return options
+}
+
+func TestRunModule(t *testing.T) {
 	t.Parallel()
 
-	options := setupOptions(t, "iam-access-g-upg", basicExampleDir)
+	options := setupModuleOptions(t, "ag-module", moduleExampleDir)
+
+	output, err := options.RunTestConsistency()
+	assert.Nil(t, err, "This should not have errored")
+	assert.NotNil(t, output, "Expected some output")
+}
+
+func TestRunModuleUpgrade(t *testing.T) {
+	t.Parallel()
+
+	options := setupModuleOptions(t, "ag-upg-module", moduleExampleDir)
 
 	output, err := options.RunTestUpgrade()
 	if !options.UpgradeTestSkipped {
