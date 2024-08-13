@@ -105,6 +105,7 @@ No modules.
 | <a name="input_provision"></a> [provision](#input\_provision) | Would you like to provision a new access group (true/false) | `bool` | `true` | no |
 | <a name="input_service_ids"></a> [service\_ids](#input\_service\_ids) | A list of service IDS that you want to add to the access group. | `list(string)` | `null` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Tags that should be applied to the service | `list(string)` | `null` | no |
+| <a name="input_trusted_profile_ids"></a> [trusted\_profile\_ids](#input\_trusted\_profile\_ids) | A list of trusted profile IDS that you want to add to the access group. | `list(string)` | `null` | no |
 
 ### Outputs
 

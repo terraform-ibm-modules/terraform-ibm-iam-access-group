@@ -51,6 +51,12 @@ variable "service_ids" {
   default     = null
 }
 
+variable "trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of trusted profile IDS that you want to add to the access group."
+  default     = null
+}
+
 ##############################################################################
 # access group policy
 ##############################################################################
