@@ -98,6 +98,12 @@ variable "admin_observability_ag_service_ids" {
   default     = []
 }
 
+variable "admin_observability_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs that you want to add to the admin observability access group"
+  default     = []
+}
+
 ##############################################################################
 # Admin Security Services Variables
 ##############################################################################
@@ -202,6 +208,12 @@ variable "admin_security_ag_ibm_ids" {
 variable "admin_security_ag_service_ids" {
   type        = list(string)
   description = "A list of Service IDs you want to add to the admin security access group"
+  default     = null
+}
+
+variable "admin_security_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the admin security access group"
   default     = null
 }
 
@@ -368,6 +380,12 @@ variable "admin_network_ag_service_ids" {
   default     = null
 }
 
+variable "admin_network_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the admin network access group"
+  default     = null
+}
+
 ##############################################################################
 # Admin Compute Services Variables
 ##############################################################################
@@ -510,6 +528,12 @@ variable "admin_compute_ag_service_ids" {
   default     = null
 }
 
+variable "admin_compute_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the admin compute access group"
+  default     = null
+}
+
 ##############################################################################
 # Privileged Observability Services Variables
 ##############################################################################
@@ -607,6 +631,12 @@ variable "privileged_observability_ag_ibm_ids" {
 variable "privileged_observability_ag_service_ids" {
   type        = list(string)
   description = "A list of Service IDs you want to add to the privileged observability access group"
+  default     = null
+}
+
+variable "privileged_observability_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the privileged observability access group"
   default     = null
 }
 
@@ -714,6 +744,12 @@ variable "privileged_security_ag_ibm_ids" {
 variable "privileged_security_ag_service_ids" {
   type        = list(string)
   description = "A list of Service IDs you want to add to the privileged security access group"
+  default     = null
+}
+
+variable "privileged_security_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the privileged security access group"
   default     = null
 }
 
@@ -880,6 +916,12 @@ variable "privileged_network_ag_service_ids" {
   default     = null
 }
 
+variable "privileged_network_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the privileged network access group"
+  default     = null
+}
+
 ##############################################################################
 # Privileged Compute Services Variables
 ##############################################################################
@@ -1022,6 +1064,12 @@ variable "privileged_compute_ag_service_ids" {
   default     = null
 }
 
+variable "privileged_compute_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the privileged compute access group"
+  default     = null
+}
+
 ##############################################################################
 # Observer Observability Services Variables
 ##############################################################################
@@ -1119,6 +1167,12 @@ variable "observer_observability_ag_ibm_ids" {
 variable "observer_observability_ag_service_ids" {
   type        = list(string)
   description = "A list of Service IDs you want to add to the observer observability access group"
+  default     = null
+}
+
+variable "observer_observability_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the observer observability access group"
   default     = null
 }
 
@@ -1226,6 +1280,12 @@ variable "observer_security_ag_ibm_ids" {
 variable "observer_security_ag_service_ids" {
   type        = list(string)
   description = "A list of Service IDs you want to add to the observer security access group"
+  default     = null
+}
+
+variable "observer_security_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the observer security access group"
   default     = null
 }
 
@@ -1392,6 +1452,12 @@ variable "observer_network_ag_service_ids" {
   default     = null
 }
 
+variable "observer_network_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the observer network access group"
+  default     = null
+}
+
 ##############################################################################
 # Observer Compute Services Variables
 ##############################################################################
@@ -1531,5 +1597,11 @@ variable "observer_compute_ag_ibm_ids" {
 variable "observer_compute_ag_service_ids" {
   type        = list(string)
   description = "A list of Service IDs you want to add to the observer compute access group"
+  default     = null
+}
+
+variable "observer_compute_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the observer compute access group"
   default     = null
 }
