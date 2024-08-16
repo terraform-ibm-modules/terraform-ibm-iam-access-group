@@ -32,7 +32,7 @@ variable "description" {
 variable "tags" {
   type        = list(string)
   description = "Tags that should be applied to the service"
-  default     = null
+  default     = []
 }
 
 ##############################################################################
@@ -42,19 +42,19 @@ variable "tags" {
 variable "ibm_ids" {
   description = "A list of IBM IDs that you want to add to the access group."
   type        = list(string)
-  default     = null
+  default     = []
 }
 
 variable "service_ids" {
   type        = list(string)
   description = "A list of service IDS that you want to add to the access group."
-  default     = null
+  default     = []
 }
 
 variable "trusted_profile_ids" {
   type        = list(string)
   description = "A list of trusted profile IDS that you want to add to the access group."
-  default     = null
+  default     = []
 }
 
 ##############################################################################
