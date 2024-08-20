@@ -98,6 +98,12 @@ variable "admin_observability_ag_service_ids" {
   default     = []
 }
 
+variable "admin_observability_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs that you want to add to the admin observability access group"
+  default     = []
+}
+
 ##############################################################################
 # Admin Security Services Variables
 ##############################################################################
@@ -190,19 +196,25 @@ variable "admin_security_ag_description" {
 variable "admin_security_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your admin security access group"
-  default     = null
+  default     = []
 }
 
 variable "admin_security_ag_ibm_ids" {
   type        = list(string)
   description = "A list of IBM IDs you want to add to the admin security access group"
-  default     = null
+  default     = []
 }
 
 variable "admin_security_ag_service_ids" {
   type        = list(string)
   description = "A list of Service IDs you want to add to the admin security access group"
-  default     = null
+  default     = []
+}
+
+variable "admin_security_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the admin security access group"
+  default     = []
 }
 
 ##############################################################################
@@ -353,19 +365,25 @@ variable "admin_network_ag_description" {
 variable "admin_network_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your admin network access group"
-  default     = null
+  default     = []
 }
 
 variable "admin_network_ag_ibm_ids" {
   type        = list(string)
   description = "A list of IBM IDs you want to add to the admin network access group"
-  default     = null
+  default     = []
 }
 
 variable "admin_network_ag_service_ids" {
   type        = list(string)
   description = "A list of Service IDs you want to add to the admin network access group"
-  default     = null
+  default     = []
+}
+
+variable "admin_network_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the admin network access group"
+  default     = []
 }
 
 ##############################################################################
@@ -495,19 +513,25 @@ variable "admin_compute_ag_description" {
 variable "admin_compute_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your admin compute access group"
-  default     = null
+  default     = []
 }
 
 variable "admin_compute_ag_ibm_ids" {
   type        = list(string)
   description = "A list of IBM IDs you want to add to the admin compute access group"
-  default     = null
+  default     = []
 }
 
 variable "admin_compute_ag_service_ids" {
   type        = list(string)
   description = "A list of Service IDs you want to add to the admin compute access group"
-  default     = null
+  default     = []
+}
+
+variable "admin_compute_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the admin compute access group"
+  default     = []
 }
 
 ##############################################################################
@@ -595,19 +619,25 @@ variable "privileged_observability_ag_description" {
 variable "privileged_observability_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your privileged observability access group"
-  default     = null
+  default     = []
 }
 
 variable "privileged_observability_ag_ibm_ids" {
   type        = list(string)
   description = "A list of IBM IDs you want to add to the privileged observability access group"
-  default     = null
+  default     = []
 }
 
 variable "privileged_observability_ag_service_ids" {
   type        = list(string)
   description = "A list of Service IDs you want to add to the privileged observability access group"
-  default     = null
+  default     = []
+}
+
+variable "privileged_observability_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the privileged observability access group"
+  default     = []
 }
 
 ##############################################################################
@@ -702,19 +732,25 @@ variable "privileged_security_ag_description" {
 variable "privileged_security_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your privileged security access group"
-  default     = null
+  default     = []
 }
 
 variable "privileged_security_ag_ibm_ids" {
   type        = list(string)
   description = "A list of IBM IDs you want to add to the privileged security access group"
-  default     = null
+  default     = []
 }
 
 variable "privileged_security_ag_service_ids" {
   type        = list(string)
   description = "A list of Service IDs you want to add to the privileged security access group"
-  default     = null
+  default     = []
+}
+
+variable "privileged_security_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the privileged security access group"
+  default     = []
 }
 
 ##############################################################################
@@ -865,19 +901,25 @@ variable "privileged_network_ag_description" {
 variable "privileged_network_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your privileged network access group"
-  default     = null
+  default     = []
 }
 
 variable "privileged_network_ag_ibm_ids" {
   type        = list(string)
   description = "A list of IBM IDs you want to add to the privileged network access group"
-  default     = null
+  default     = []
 }
 
 variable "privileged_network_ag_service_ids" {
   type        = list(string)
   description = "A list of Service IDs you want to add to the privileged network access group"
-  default     = null
+  default     = []
+}
+
+variable "privileged_network_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the privileged network access group"
+  default     = []
 }
 
 ##############################################################################
@@ -1007,19 +1049,25 @@ variable "privileged_compute_ag_description" {
 variable "privileged_compute_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your privileged compute access group"
-  default     = null
+  default     = []
 }
 
 variable "privileged_compute_ag_ibm_ids" {
   type        = list(string)
   description = "A list of IBM IDs you want to add to the privileged compute access group"
-  default     = null
+  default     = []
 }
 
 variable "privileged_compute_ag_service_ids" {
   type        = list(string)
   description = "A list of Service IDs you want to add to the privileged compute access group"
-  default     = null
+  default     = []
+}
+
+variable "privileged_compute_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the privileged compute access group"
+  default     = []
 }
 
 ##############################################################################
@@ -1107,19 +1155,25 @@ variable "observer_observability_ag_description" {
 variable "observer_observability_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your observer observability access group"
-  default     = null
+  default     = []
 }
 
 variable "observer_observability_ag_ibm_ids" {
   type        = list(string)
   description = "A list of IBM IDs you want to add to the observer observability access group"
-  default     = null
+  default     = []
 }
 
 variable "observer_observability_ag_service_ids" {
   type        = list(string)
   description = "A list of Service IDs you want to add to the observer observability access group"
-  default     = null
+  default     = []
+}
+
+variable "observer_observability_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the observer observability access group"
+  default     = []
 }
 
 ##############################################################################
@@ -1214,19 +1268,25 @@ variable "observer_security_ag_description" {
 variable "observer_security_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your observer security access group"
-  default     = null
+  default     = []
 }
 
 variable "observer_security_ag_ibm_ids" {
   type        = list(string)
   description = "A list of IBM IDs you want to add to the observer security access group"
-  default     = null
+  default     = []
 }
 
 variable "observer_security_ag_service_ids" {
   type        = list(string)
   description = "A list of Service IDs you want to add to the observer security access group"
-  default     = null
+  default     = []
+}
+
+variable "observer_security_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the observer security access group"
+  default     = []
 }
 
 ##############################################################################
@@ -1377,19 +1437,25 @@ variable "observer_network_ag_description" {
 variable "observer_network_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your observer network access group"
-  default     = null
+  default     = []
 }
 
 variable "observer_network_ag_ibm_ids" {
   type        = list(string)
   description = "A list of IBM IDs you want to add to the observer network access group"
-  default     = null
+  default     = []
 }
 
 variable "observer_network_ag_service_ids" {
   type        = list(string)
   description = "A list of Service IDs you want to add to the observer network access group"
-  default     = null
+  default     = []
+}
+
+variable "observer_network_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the observer network access group"
+  default     = []
 }
 
 ##############################################################################
@@ -1519,17 +1585,23 @@ variable "observer_compute_ag_description" {
 variable "observer_compute_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your observer compute access group"
-  default     = null
+  default     = []
 }
 
 variable "observer_compute_ag_ibm_ids" {
   type        = list(string)
   description = "A list of IBM IDs you want to add to the observer compute access group"
-  default     = null
+  default     = []
 }
 
 variable "observer_compute_ag_service_ids" {
   type        = list(string)
   description = "A list of Service IDs you want to add to the observer compute access group"
-  default     = null
+  default     = []
+}
+
+variable "observer_compute_ag_trusted_profile_ids" {
+  type        = list(string)
+  description = "A list of Trusted Profile IDs you want to add to the observer compute access group"
+  default     = []
 }

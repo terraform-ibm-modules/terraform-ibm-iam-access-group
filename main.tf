@@ -19,6 +19,7 @@ resource "ibm_iam_access_group_members" "access_group_members" {
   access_group_id = var.provision ? ibm_iam_access_group.access_group[0].id : data.ibm_iam_access_group.access_group_data[0].groups[0].id
   ibm_ids         = var.ibm_ids
   iam_service_ids = var.service_ids
+  iam_profile_ids = var.trusted_profile_ids
 }
 
 resource "ibm_iam_access_group_policy" "policy" {

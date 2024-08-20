@@ -100,11 +100,12 @@ No modules.
 | <a name="input_add_members"></a> [add\_members](#input\_add\_members) | Enable this to add members to access group | `bool` | `true` | no |
 | <a name="input_description"></a> [description](#input\_description) | Description to access group | `string` | `null` | no |
 | <a name="input_dynamic_rules"></a> [dynamic\_rules](#input\_dynamic\_rules) | list of dynamic rules | <pre>map(object({<br>    expiration        = number<br>    identity_provider = string<br>    conditions = list(object({<br>      claim    = string<br>      operator = string<br>      value    = string<br>    }))<br>  }))</pre> | n/a | yes |
-| <a name="input_ibm_ids"></a> [ibm\_ids](#input\_ibm\_ids) | A list of IBM IDs that you want to add to the access group. | `list(string)` | `null` | no |
+| <a name="input_ibm_ids"></a> [ibm\_ids](#input\_ibm\_ids) | A list of IBM IDs that you want to add to the access group. | `list(string)` | `[]` | no |
 | <a name="input_policies"></a> [policies](#input\_policies) | list of policies | <pre>map(object({<br>    roles              = list(string)<br>    account_management = optional(bool)<br>    tags               = set(string)<br>    resources = optional(list(object({<br>      region               = optional(string)<br>      attributes           = optional(map(string))<br>      service              = optional(string)<br>      resource_instance_id = optional(string)<br>      resource_type        = optional(string)<br>      resource             = optional(string)<br>      resource_group_id    = optional(string)<br>    })))<br>    resource_attributes = optional(list(object({<br>      name     = string<br>      value    = string<br>      operator = optional(string)<br>    })))<br>  }))</pre> | n/a | yes |
 | <a name="input_provision"></a> [provision](#input\_provision) | Would you like to provision a new access group (true/false) | `bool` | `true` | no |
-| <a name="input_service_ids"></a> [service\_ids](#input\_service\_ids) | A list of service IDS that you want to add to the access group. | `list(string)` | `null` | no |
-| <a name="input_tags"></a> [tags](#input\_tags) | Tags that should be applied to the service | `list(string)` | `null` | no |
+| <a name="input_service_ids"></a> [service\_ids](#input\_service\_ids) | A list of service IDS that you want to add to the access group. | `list(string)` | `[]` | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | Tags that should be applied to the service | `list(string)` | `[]` | no |
+| <a name="input_trusted_profile_ids"></a> [trusted\_profile\_ids](#input\_trusted\_profile\_ids) | A list of trusted profile IDS that you want to add to the access group. | `list(string)` | `[]` | no |
 
 ### Outputs
 
