@@ -1,5 +1,5 @@
 terraform {
-  required_version = ">= 1.3.0, <1.7.0"
+  required_version = ">= 1.3.0"
   required_providers {
     # Provider used by the module, ignoring linter warning
     # tflint-ignore: terraform_unused_required_providers
