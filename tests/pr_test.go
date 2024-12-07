@@ -12,6 +12,7 @@ import (
 const resourceGroup = "geretain-test-resources"
 const basicExampleDir = "examples/basic"
 const moduleExampleDir = "examples/access-management"
+const solutionDir = "solution/access-management"
 
 func setupOptions(t *testing.T, prefix string, dir string) *testhelper.TestOptions {
 	options := testhelper.TestOptionsDefault(&testhelper.TestOptions{
@@ -65,6 +66,28 @@ func TestRunModuleUpgrade(t *testing.T) {
 	t.Parallel()
 
 	options := setupModuleOptions(t, "ag-upg-module", moduleExampleDir)
+
+	output, err := options.RunTestUpgrade()
+	if !options.UpgradeTestSkipped {
+		assert.Nil(t, err, "This should not have errored")
+		assert.NotNil(t, output, "Expected some output")
+	}
+}
+
+func TestRunDA(t *testing.T) {
+	t.Parallel()
+
+	options := setupOptions(t, "acc-mgmt", solutionDir)
+
+	output, err := options.RunTestConsistency()
+	assert.Nil(t, err, "This should not have errored")
+	assert.NotNil(t, output, "Expected some output")
+}
+
+func TestRunUpgradeDA(t *testing.T) {
+	t.Parallel()
+
+	options := setupOptions(t, "acc-mgmt-upg", solutionDir)
 
 	output, err := options.RunTestUpgrade()
 	if !options.UpgradeTestSkipped {
