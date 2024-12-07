@@ -64,6 +64,267 @@
             ]
           },
           "configuration": [
+            {
+              "key": "ibmcloud_api_key"
+            },
+            {
+              "key": "provider_visibility"
+            },
+            {
+              "key": "prefix"
+            },
+            {
+              "key": "admin_compute_ag_name"
+            },
+            {
+              "key": "admin_compute_ag_description"
+            },
+            {
+              "key": "admin_compute_ag_add_members"
+            },
+            {
+              "key": "admin_compute_ag_ibm_ids"
+            },
+            {
+              "key": "admin_compute_ag_service_ids"
+            },
+            {
+              "key": "admin_compute_ag_trusted_profile_ids"
+            },
+            {
+              "key": "admin_compute_ag_tags"
+            },
+            {
+              "key": "admin_network_ag_name"
+            },
+            {
+              "key": "admin_network_ag_description"
+            },
+            {
+              "key": "admin_network_ag_add_members"
+            },
+            {
+              "key": "admin_network_ag_ibm_ids"
+            },
+            {
+              "key": "admin_network_ag_service_ids"
+            },
+            {
+              "key": "admin_network_ag_trusted_profile_ids"
+            },
+            {
+              "key": "admin_network_ag_tags"
+            },
+            {
+              "key": "admin_observability_ag_name"
+            },
+            {
+              "key": "admin_observability_ag_description"
+            },
+            {
+              "key": "admin_observability_ag_add_members"
+            },
+            {
+              "key": "admin_observability_ag_ibm_ids"
+            },
+            {
+              "key": "admin_observability_ag_service_ids"
+            },
+            {
+              "key": "admin_observability_ag_trusted_profile_ids"
+            },
+            {
+              "key": "admin_observability_ag_tags"
+            },
+            {
+              "key": "admin_security_ag_name"
+            },
+            {
+              "key": "admin_security_ag_description"
+            },
+            {
+              "key": "admin_security_ag_add_members"
+            },
+            {
+              "key": "admin_security_ag_ibm_ids"
+            },
+            {
+              "key": "admin_security_ag_service_ids"
+            },
+            {
+              "key": "admin_security_ag_trusted_profile_ids"
+            },
+            {
+              "key": "admin_security_ag_tags"
+            },
+            {
+              "key": "privileged_compute_ag_name"
+            },
+            {
+              "key": "privileged_compute_ag_description"
+            },
+            {
+              "key": "privileged_compute_ag_add_members"
+            },
+            {
+              "key": "privileged_compute_ag_ibm_ids"
+            },
+            {
+              "key": "privileged_compute_ag_service_ids"
+            },
+            {
+              "key": "privileged_compute_ag_trusted_profile_ids"
+            },
+            {
+              "key": "privileged_compute_ag_tags"
+            },
+            {
+              "key": "privileged_network_ag_name"
+            },
+            {
+              "key": "privileged_network_ag_description"
+            },
+            {
+              "key": "privileged_network_ag_add_members"
+            },
+            {
+              "key": "privileged_network_ag_ibm_ids"
+            },
+            {
+              "key": "privileged_network_ag_service_ids"
+            },
+            {
+              "key": "privileged_network_ag_trusted_profile_ids"
+            },
+            {
+              "key": "privileged_network_ag_tags"
+            },
+            {
+              "key": "privileged_observability_ag_name"
+            },
+            {
+              "key": "privileged_observability_ag_description"
+            },
+            {
+              "key": "privileged_observability_ag_add_members"
+            },
+            {
+              "key": "privileged_observability_ag_ibm_ids"
+            },
+            {
+              "key": "privileged_observability_ag_service_ids"
+            },
+            {
+              "key": "privileged_observability_ag_trusted_profile_ids"
+            },
+            {
+              "key": "privileged_observability_ag_tags"
+            },
+            {
+              "key": "privileged_security_ag_name"
+            },
+            {
+              "key": "privileged_security_ag_description"
+            },
+            {
+              "key": "privileged_security_ag_add_members"
+            },
+            {
+              "key": "privileged_security_ag_ibm_ids"
+            },
+            {
+              "key": "privileged_security_ag_service_ids"
+            },
+            {
+              "key": "privileged_security_ag_trusted_profile_ids"
+            },
+            {
+              "key": "privileged_security_ag_tags"
+            },
+            {
+              "key": "observer_compute_ag_name"
+            },
+            {
+              "key": "observer_compute_ag_description"
+            },
+            {
+              "key": "observer_compute_ag_add_members"
+            },
+            {
+              "key": "observer_compute_ag_ibm_ids"
+            },
+            {
+              "key": "observer_compute_ag_service_ids"
+            },
+            {
+              "key": "observer_compute_ag_trusted_profile_ids"
+            },
+            {
+              "key": "observer_compute_ag_tags"
+            },
+            {
+              "key": "observer_network_ag_name"
+            },
+            {
+              "key": "observer_network_ag_description"
+            },
+            {
+              "key": "observer_network_ag_add_members"
+            },
+            {
+              "key": "observer_network_ag_ibm_ids"
+            },
+            {
+              "key": "observer_network_ag_service_ids"
+            },
+            {
+              "key": "observer_network_ag_trusted_profile_ids"
+            },
+            {
+              "key": "observer_network_ag_tags"
+            },
+            {
+              "key": "observer_observability_ag_name"
+            },
+            {
+              "key": "observer_observability_ag_description"
+            },
+            {
+              "key": "observer_observability_ag_add_members"
+            },
+            {
+              "key": "observer_observability_ag_ibm_ids"
+            },
+            {
+              "key": "observer_observability_ag_service_ids"
+            },
+            {
+              "key": "observer_observability_ag_trusted_profile_ids"
+            },
+            {
+              "key": "observer_observability_ag_tags"
+            },
+            {
+              "key": "observer_security_ag_name"
+            },
+            {
+              "key": "observer_security_ag_description"
+            },
+            {
+              "key": "observer_security_ag_add_members"
+            },
+            {
+              "key": "observer_security_ag_ibm_ids"
+            },
+            {
+              "key": "observer_security_ag_service_ids"
+            },
+            {
+              "key": "observer_security_ag_trusted_profile_ids"
+            },
+            {
+              "key": "observer_security_ag_tags"
+            }
           ]
         }
       ]
