@@ -82,7 +82,7 @@ func setupDAOptions(t *testing.T, prefix string, dir string) *testhelper.TestOpt
 	})
 
 	options.TerraformVars = map[string]interface{}{
-		"provider_visibility": "public-and-private",
+		"provider_visibility": "public",
 		"prefix":              options.Prefix,
 	}
 
