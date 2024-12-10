@@ -74,10 +74,25 @@ func TestRunModuleUpgrade(t *testing.T) {
 	}
 }
 
+func setupDAOptions(t *testing.T, prefix string, dir string) *testhelper.TestOptions {
+	options := testhelper.TestOptionsDefault(&testhelper.TestOptions{
+		Testing:      t,
+		TerraformDir: dir,
+		Prefix:       prefix,
+	})
+
+	options.TerraformVars = map[string]interface{}{
+		"provider_visibility": "public-and-private",
+		"prefix":              options.Prefix,
+	}
+
+	return options
+}
+
 func TestRunDA(t *testing.T) {
 	t.Parallel()
 
-	options := setupOptions(t, "acc-mgmt", solutionDir)
+	options := setupDAOptions(t, "acc-mgmt", solutionDir)
 
 	output, err := options.RunTestConsistency()
 	assert.Nil(t, err, "This should not have errored")
@@ -87,7 +102,7 @@ func TestRunDA(t *testing.T) {
 func TestRunUpgradeDA(t *testing.T) {
 	t.Parallel()
 
-	options := setupOptions(t, "acc-mgmt-upg", solutionDir)
+	options := setupDAOptions(t, "acc-mgmt-upg", solutionDir)
 
 	output, err := options.RunTestUpgrade()
 	if !options.UpgradeTestSkipped {
