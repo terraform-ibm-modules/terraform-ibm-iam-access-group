@@ -37,7 +37,7 @@
           "label": "Standard",
           "name": "standard",
           "install_type": "fullstack",
-          "working_directory": "solutions/access-management",
+          "working_directory": "solutions/standard",
           "compliance": {
             "authority": "scc-v3",
             "controls": [],
