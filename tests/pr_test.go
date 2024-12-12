@@ -14,7 +14,7 @@ import (
 const resourceGroup = "geretain-test-resources"
 const basicExampleDir = "examples/basic"
 const moduleExampleDir = "examples/access-management"
-const solutionDir = "solutions/access-management"
+const solutionDir = "solutions/standard"
 
 func setupOptions(t *testing.T, prefix string, dir string) *testhelper.TestOptions {
 	options := testhelper.TestOptionsDefault(&testhelper.TestOptions{
