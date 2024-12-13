@@ -1,0 +1,346 @@
+{
+  "products": [
+    {
+      "name": "deploy-arch-ibm-iam-access-group",
+      "label": "Cloud Automation for Access Management",
+      "product_kind": "solution",
+      "tags": [
+        "ibm_created",
+        "target_terraform",
+        "terraform",
+        "security",
+        "solution"
+      ],
+      "keywords": [
+        "IaC",
+        "infrastructure as code",
+        "terraform",
+        "solution",
+        "account",
+        "iam",
+        "access group"
+      ],
+      "short_description": "Creates and configures IAM access groups",
+      "long_description": "This architecture supports creating a preconfigured set of access groups and adding users, service IDs, and trusted profiles to the access groups.",
+      "offering_docs_url": "https://github.com/terraform-ibm-modules/terraform-ibm-iam-access-group/blob/main/solutions/standard/README.md",
+      "offering_icon_url": "https://raw.githubusercontent.com/terraform-ibm-modules/documentation/main/icons/security_icon.svg",
+      "provider_name": "IBM",
+      "features": [
+        {
+          "title": "Configures IAM access groups",
+          "description": "Configures IAM access groups to provide a default set of access policies and assign users to the groups."
+        }
+      ],
+      "support_details": "This product is in the community registry, as such support is handled through the originated repo. If you experience issues please open an issue in that repository [https://github.com/terraform-ibm-modules/terraform-ibm-iam-access-group/issues](https://github.com/terraform-ibm-modules/terraform-ibm-iam-access-group/issues). Please note this product is not supported via the IBM Cloud Support Center.",
+      "flavors": [
+        {
+          "label": "Standard",
+          "name": "standard",
+          "install_type": "fullstack",
+          "working_directory": "solutions/standard",
+          "compliance": {
+            "authority": "scc-v3",
+            "profiles": [
+              {
+                "profile_name": "IBM Cloud Framework for Financial Services",
+                "profile_version": "1.7.0"
+              }
+            ]
+          },
+          "iam_permissions": [
+          ],
+          "architecture": {
+            "descriptions": "Configures IAM access groups to provide a default set of access policies and assign users to the groups.",
+            "diagrams": [
+              {
+                "diagram": {
+                  "caption": "Access Management",
+                  "url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-iam-access-group/main/reference-architectures/access-management.svg",
+                  "type": "image/svg+xml"
+                },
+                "description": "Configures IAM access groups to provide a default set of access policies and assign users to the groups."
+              }
+            ]
+          },
+          "configuration": [
+            {
+              "key": "ibmcloud_api_key"
+            },
+            {
+              "key": "provider_visibility",
+              "options": [
+                {
+                  "displayname": "private",
+                  "value": "private"
+                },
+                {
+                  "displayname": "public",
+                  "value": "public"
+                },
+                {
+                  "displayname": "public-and-private",
+                  "value": "public-and-private"
+                }
+              ]
+            },
+            {
+              "key": "prefix"
+            },
+            {
+              "key": "admin_compute_ag_name"
+            },
+            {
+              "key": "admin_compute_ag_description"
+            },
+            {
+              "key": "admin_compute_ag_add_members"
+            },
+            {
+              "key": "admin_compute_ag_ibm_ids"
+            },
+            {
+              "key": "admin_compute_ag_service_ids"
+            },
+            {
+              "key": "admin_compute_ag_trusted_profile_ids"
+            },
+            {
+              "key": "admin_compute_ag_tags"
+            },
+            {
+              "key": "admin_network_ag_name"
+            },
+            {
+              "key": "admin_network_ag_description"
+            },
+            {
+              "key": "admin_network_ag_add_members"
+            },
+            {
+              "key": "admin_network_ag_ibm_ids"
+            },
+            {
+              "key": "admin_network_ag_service_ids"
+            },
+            {
+              "key": "admin_network_ag_trusted_profile_ids"
+            },
+            {
+              "key": "admin_network_ag_tags"
+            },
+            {
+              "key": "admin_observability_ag_name"
+            },
+            {
+              "key": "admin_observability_ag_description"
+            },
+            {
+              "key": "admin_observability_ag_add_members"
+            },
+            {
+              "key": "admin_observability_ag_ibm_ids"
+            },
+            {
+              "key": "admin_observability_ag_service_ids"
+            },
+            {
+              "key": "admin_observability_ag_trusted_profile_ids"
+            },
+            {
+              "key": "admin_observability_ag_tags"
+            },
+            {
+              "key": "admin_security_ag_name"
+            },
+            {
+              "key": "admin_security_ag_description"
+            },
+            {
+              "key": "admin_security_ag_add_members"
+            },
+            {
+              "key": "admin_security_ag_ibm_ids"
+            },
+            {
+              "key": "admin_security_ag_service_ids"
+            },
+            {
+              "key": "admin_security_ag_trusted_profile_ids"
+            },
+            {
+              "key": "admin_security_ag_tags"
+            },
+            {
+              "key": "privileged_compute_ag_name"
+            },
+            {
+              "key": "privileged_compute_ag_description"
+            },
+            {
+              "key": "privileged_compute_ag_add_members"
+            },
+            {
+              "key": "privileged_compute_ag_ibm_ids"
+            },
+            {
+              "key": "privileged_compute_ag_service_ids"
+            },
+            {
+              "key": "privileged_compute_ag_trusted_profile_ids"
+            },
+            {
+              "key": "privileged_compute_ag_tags"
+            },
+            {
+              "key": "privileged_network_ag_name"
+            },
+            {
+              "key": "privileged_network_ag_description"
+            },
+            {
+              "key": "privileged_network_ag_add_members"
+            },
+            {
+              "key": "privileged_network_ag_ibm_ids"
+            },
+            {
+              "key": "privileged_network_ag_service_ids"
+            },
+            {
+              "key": "privileged_network_ag_trusted_profile_ids"
+            },
+            {
+              "key": "privileged_network_ag_tags"
+            },
+            {
+              "key": "privileged_observability_ag_name"
+            },
+            {
+              "key": "privileged_observability_ag_description"
+            },
+            {
+              "key": "privileged_observability_ag_add_members"
+            },
+            {
+              "key": "privileged_observability_ag_ibm_ids"
+            },
+            {
+              "key": "privileged_observability_ag_service_ids"
+            },
+            {
+              "key": "privileged_observability_ag_trusted_profile_ids"
+            },
+            {
+              "key": "privileged_observability_ag_tags"
+            },
+            {
+              "key": "privileged_security_ag_name"
+            },
+            {
+              "key": "privileged_security_ag_description"
+            },
+            {
+              "key": "privileged_security_ag_add_members"
+            },
+            {
+              "key": "privileged_security_ag_ibm_ids"
+            },
+            {
+              "key": "privileged_security_ag_service_ids"
+            },
+            {
+              "key": "privileged_security_ag_trusted_profile_ids"
+            },
+            {
+              "key": "privileged_security_ag_tags"
+            },
+            {
+              "key": "observer_compute_ag_name"
+            },
+            {
+              "key": "observer_compute_ag_description"
+            },
+            {
+              "key": "observer_compute_ag_add_members"
+            },
+            {
+              "key": "observer_compute_ag_ibm_ids"
+            },
+            {
+              "key": "observer_compute_ag_service_ids"
+            },
+            {
+              "key": "observer_compute_ag_trusted_profile_ids"
+            },
+            {
+              "key": "observer_compute_ag_tags"
+            },
+            {
+              "key": "observer_network_ag_name"
+            },
+            {
+              "key": "observer_network_ag_description"
+            },
+            {
+              "key": "observer_network_ag_add_members"
+            },
+            {
+              "key": "observer_network_ag_ibm_ids"
+            },
+            {
+              "key": "observer_network_ag_service_ids"
+            },
+            {
+              "key": "observer_network_ag_trusted_profile_ids"
+            },
+            {
+              "key": "observer_network_ag_tags"
+            },
+            {
+              "key": "observer_observability_ag_name"
+            },
+            {
+              "key": "observer_observability_ag_description"
+            },
+            {
+              "key": "observer_observability_ag_add_members"
+            },
+            {
+              "key": "observer_observability_ag_ibm_ids"
+            },
+            {
+              "key": "observer_observability_ag_service_ids"
+            },
+            {
+              "key": "observer_observability_ag_trusted_profile_ids"
+            },
+            {
+              "key": "observer_observability_ag_tags"
+            },
+            {
+              "key": "observer_security_ag_name"
+            },
+            {
+              "key": "observer_security_ag_description"
+            },
+            {
+              "key": "observer_security_ag_add_members"
+            },
+            {
+              "key": "observer_security_ag_ibm_ids"
+            },
+            {
+              "key": "observer_security_ag_service_ids"
+            },
+            {
+              "key": "observer_security_ag_trusted_profile_ids"
+            },
+            {
+              "key": "observer_security_ag_tags"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
