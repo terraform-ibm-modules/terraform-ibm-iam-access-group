@@ -2,7 +2,7 @@
   "products": [
     {
       "name": "deploy-arch-ibm-iam-access-group",
-      "label": "Cloud Automation for Access Management",
+      "label": "Cloud automation for access management",
       "product_kind": "solution",
       "tags": [
         "ibm_created",
