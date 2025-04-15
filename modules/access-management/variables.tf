@@ -31,7 +31,7 @@ variable "admin_observability_ag_policies" {
   description = "A map of policies for the Administrator Observability access group, has a set of default policies that can be overridden"
   default = {
     "atracker" = {
-      roles = ["Administrator", "Writer"]
+      roles = ["Administrator"]
       resources = [{
         service = "atracker"
       }]
@@ -567,7 +567,7 @@ variable "privileged_observability_ag_policies" {
   description = "A map of policies for the Privileged Observability access group, has a set of default policies that can be overridden"
   default = {
     "atracker" = {
-      roles = ["Editor", "Writer"]
+      roles = ["Editor"]
       resources = [{
         service = "atracker"
       }]
