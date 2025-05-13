@@ -38,10 +38,8 @@
           "name": "standard",
           "install_type": "fullstack",
           "working_directory": "solutions/standard",
-          "iam_permissions": [
-          ],
+          "iam_permissions": [],
           "architecture": {
-            "descriptions": "Configures IAM access groups to provide a default set of access policies and assign users to the groups.",
             "diagrams": [
               {
                 "diagram": {
