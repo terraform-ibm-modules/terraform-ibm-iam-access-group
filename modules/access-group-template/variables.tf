@@ -23,8 +23,8 @@ variable "access_group_description" {
 variable "members" {
   description = "Members to be added to the access group"
   type = object({
-    users           = optional(list(string), [])
-    services        = optional(list(string), [])
+    users    = optional(list(string), [])
+    services = optional(list(string), [])
     action_controls = optional(object({
       add    = optional(bool, true)
       remove = optional(bool, true)
@@ -36,20 +36,20 @@ variable "members" {
 variable "assertions" {
   description = "Dynamic rules for the access group"
   type = list(object({
-    rules                      = list(object({
-      name = string
+    rules = list(object({
+      name       = string
       expiration = number
       realm_name = string
       conditions = object({
-        claim = string
+        claim    = string
         operator = string
-        value = string
+        value    = string
       })
       action_control = optional(object({
         remove = optional(bool, false)
       }))
     }))
-    action_controls           = optional(object({
+    action_controls = optional(object({
       add    = optional(bool, false)
       remove = optional(bool, false)
     }))

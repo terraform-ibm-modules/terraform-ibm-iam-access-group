@@ -11,8 +11,8 @@ module "access_group_template" {
 
   # Define members for the access group
   members = {
-    users    =  var.user_ids
-    services =  var.service_ids
+    users    = var.user_ids
+    services = var.service_ids
     action_controls = {
       add    = true
       remove = true
@@ -28,7 +28,7 @@ module "access_group_template" {
       attributes = [
         {
           key      = "serviceName"
-           value    = "cloud-object-storage"
+          value    = "cloud-object-storage"
           operator = "stringEquals"
         }
       ]

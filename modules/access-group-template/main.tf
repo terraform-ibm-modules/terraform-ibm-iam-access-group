@@ -52,10 +52,10 @@ resource "ibm_iam_access_group_template" "access_group_template_instance" {
     description = var.access_group_description
 
     members {
-      users = var.members.users
+      users    = var.members.users
       services = var.members.services
       action_controls {
-        add = var.members.action_controls.add
+        add    = var.members.action_controls.add
         remove = var.members.action_controls.remove
       }
     }
