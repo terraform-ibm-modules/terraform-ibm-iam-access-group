@@ -8,8 +8,9 @@
         "ibm_created",
         "target_terraform",
         "terraform",
+        "solution",
         "security",
-        "solution"
+        "converged_infra"
       ],
       "keywords": [
         "IaC",
@@ -327,7 +328,8 @@
             {
               "key": "observer_security_ag_tags"
             }
-          ]
+          ],
+          "terraform_version": "1.10.5"
         }
       ]
     }
