@@ -16,8 +16,8 @@ This module is used to create an access group, adding members to access group, d
 * [Submodules](./modules)
     * [access-management](./modules/access-management)
 * [Examples](./examples)
-    * [Access Management example](./examples/access-management)
-    * [Basic example](./examples/basic)
+    * <div style="display: inline-block;"><a href="./examples/access-management">Access Management example</a></div> <div style="display: inline-block; vertical-align: middle;"><a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=iag-access-management-example&repository=github.com/terraform-ibm-modules/terraform-ibm-iam-access-group/tree/main/examples/access-management" target="_blank"><img src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg" alt="Deploy to IBM Cloud button"></a></div>
+    * <div style="display: inline-block;"><a href="./examples/basic">Basic example</a></div> <div style="display: inline-block; vertical-align: middle;"><a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=iag-basic-example&repository=github.com/terraform-ibm-modules/terraform-ibm-iam-access-group/tree/main/examples/basic" target="_blank"><img src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg" alt="Deploy to IBM Cloud button"></a></div>
 * [Contributing](#contributing)
 <!-- END OVERVIEW HOOK -->
 
