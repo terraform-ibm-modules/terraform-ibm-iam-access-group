@@ -9,15 +9,15 @@
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 
-This module is used to create an acess group, adding members to access group, defining the acces group policy and adding dynamic rules to access group. Access groups can be used to define a set of permissions that you want to grant to a group of users.
+This module is used to create an access group, adding members to access group, defining the acces group policy and adding dynamic rules to access group. Access groups can be used to define a set of permissions that you want to grant to a group of users.
 <!-- BEGIN OVERVIEW HOOK -->
 ## Overview
 * [terraform-ibm-iam-access-group](#terraform-ibm-iam-access-group)
 * [Submodules](./modules)
     * [access-management](./modules/access-management)
 * [Examples](./examples)
-    * [Access Management example](./examples/access-management)
-    * [Basic example](./examples/basic)
+    * <div style="display: inline-block;"><a href="./examples/access-management">Access Management example</a></div> <div style="display: inline-block; vertical-align: middle;"><a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=iag-access-management-example&repository=github.com/terraform-ibm-modules/terraform-ibm-iam-access-group/tree/main/examples/access-management" target="_blank"><img src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg" alt="Deploy to IBM Cloud button"></a></div>
+    * <div style="display: inline-block;"><a href="./examples/basic">Basic example</a></div> <div style="display: inline-block; vertical-align: middle;"><a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=iag-basic-example&repository=github.com/terraform-ibm-modules/terraform-ibm-iam-access-group/tree/main/examples/basic" target="_blank"><img src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg" alt="Deploy to IBM Cloud button"></a></div>
 * [Contributing](#contributing)
 <!-- END OVERVIEW HOOK -->
 

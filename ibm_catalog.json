@@ -341,7 +341,7 @@
               "key": "observer_security_ag_tags"
             }
           ],
-          "terraform_version": "1.10.5",
+          "terraform_version": "1.12.2",
           "ignore_readme": true
         }
       ]
