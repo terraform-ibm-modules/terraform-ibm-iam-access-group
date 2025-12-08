@@ -43,6 +43,7 @@
           "name": "standard",
           "install_type": "fullstack",
           "working_directory": "solutions/standard",
+          "short_description": "Standard IAM access group configuration",
           "iam_permissions": [],
           "architecture": {
             "diagrams": [
