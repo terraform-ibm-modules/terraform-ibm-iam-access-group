@@ -43,7 +43,7 @@
           "name": "standard",
           "install_type": "fullstack",
           "working_directory": "solutions/standard",
-          "short_description": "Standard IAM access group configuration",
+          "short_description": "Ideal for users who want a standard IAM access group configuration with predefined roles and policies.",
           "iam_permissions": [],
           "architecture": {
             "diagrams": [
