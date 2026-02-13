@@ -59,6 +59,38 @@ resource "ibm_iam_access_group_template" "access_group_template_instance" {
         remove = var.members.action_controls.remove
       }
     }
+
+    dynamic "assertions" {
+      for_each = var.assertions
+      content {
+        dynamic "rules" {
+          for_each = assertions.value.rules
+          content {
+            name        = rules.value.name
+            expiration  = rules.value.expiration
+            realm_name  = rules.value.realm_name
+            conditions {
+              claim    = rules.value.conditions.claim
+              operator = rules.value.conditions.operator
+              value    = rules.value.conditions.value
+            }
+            dynamic "action_control" {
+              for_each = rules.value.action_control != null ? [rules.value.action_control] : []
+              content {
+                remove = action_control.value.remove
+              }
+            }
+          }
+        }
+        dynamic "action_controls" {
+          for_each = assertions.value.action_controls != null ? [assertions.value.action_controls] : []
+          content {
+            add    = action_controls.value.add
+            remove = action_controls.value.remove
+          }
+        }
+      }
+    }
   }
 
   dynamic "policy_template_references" {
