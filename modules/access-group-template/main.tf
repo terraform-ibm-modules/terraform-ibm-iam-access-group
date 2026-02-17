@@ -66,19 +66,13 @@ resource "ibm_iam_access_group_template" "access_group_template_instance" {
         dynamic "rules" {
           for_each = assertions.value.rules
           content {
-            name        = rules.value.name
-            expiration  = rules.value.expiration
-            realm_name  = rules.value.realm_name
+            name       = rules.value.name
+            expiration = rules.value.expiration
+            realm_name = rules.value.realm_name
             conditions {
               claim    = rules.value.conditions.claim
               operator = rules.value.conditions.operator
               value    = rules.value.conditions.value
-            }
-            dynamic "action_control" {
-              for_each = rules.value.action_control != null ? [rules.value.action_control] : []
-              content {
-                remove = action_control.value.remove
-              }
             }
           }
         }
@@ -166,7 +160,7 @@ locals {
   )
   all_accounts = length(var.account_ids_to_assign) > 0 ? var.account_ids_to_assign[0] == "all" ? true : false : false
   # tflint-ignore: terraform_unused_declarations
-  validate_account_ids = !local.all_accounts ? length(local.compared_account_list) != length(var.account_ids_to_assign) ? tobool("Could not find all of the accounts listed in the 'account_ids_to_assign' value. Please verify all values are correct") : true : true
+  validate_account_ids = !local.all_accounts ? length(local.compared_account_list) != length(var.account_ids_to_assign) ? tobool("Could not find all of the accounts listed in the 'account_ids_assign' value. Please verify all values are correct") : true : true
 
   combined_account_targets = local.all_accounts ? {
     for target in local.account_targets :

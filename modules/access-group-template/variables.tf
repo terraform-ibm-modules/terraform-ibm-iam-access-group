@@ -45,9 +45,6 @@ variable "assertions" {
         operator = string
         value    = string
       })
-      action_control = optional(object({
-        remove = optional(bool, false)
-      }))
     }))
     action_controls = optional(object({
       add    = optional(bool, false)
