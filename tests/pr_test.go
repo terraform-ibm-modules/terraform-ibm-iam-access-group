@@ -11,7 +11,7 @@ import (
 )
 
 // Use existing resource group
-const resourceGroup = "geretain-test-resources"
+// const resourceGroup = "geretain-test-resources"
 const basicExampleDir = "examples/basic"
 const moduleExampleDir = "examples/access-management"
 const solutionDir = "solutions/standard"
@@ -19,10 +19,14 @@ const templateExampleDir = "examples/access-group-template"
 
 func setupOptions(t *testing.T, prefix string, dir string) *testhelper.TestOptions {
 	options := testhelper.TestOptionsDefault(&testhelper.TestOptions{
-		Testing:       t,
-		TerraformDir:  dir,
-		Prefix:        prefix,
-		ResourceGroup: resourceGroup,
+		Testing:      t,
+		TerraformDir: dir,
+		Prefix:       prefix,
+		/*
+		 Comment out the 'ResourceGroup' input to force this tests to create a unique resource group. This is because
+		 we need to run a test in enterprise account.
+		*/
+		// ResourceGroup: resourceGroup,
 	})
 
 	options.TerraformVars = map[string]interface{}{
@@ -94,10 +98,14 @@ func setupDAOptions(t *testing.T, prefix string, dir string) *testhelper.TestOpt
 
 func TestRunDASchematics(t *testing.T) {
 	options := testschematic.TestSchematicOptionsDefault(&testschematic.TestSchematicOptions{
-		Testing:                t,
-		TarIncludePatterns:     []string{"*.tf", fmt.Sprintf("%s/*.tf", solutionDir), "modules/access-management/*.tf"},
-		TemplateFolder:         solutionDir,
-		ResourceGroup:          resourceGroup,
+		Testing:            t,
+		TarIncludePatterns: []string{"*.tf", fmt.Sprintf("%s/*.tf", solutionDir), "modules/access-management/*.tf"},
+		TemplateFolder:     solutionDir,
+		/*
+		 Comment out the 'ResourceGroup' input to force this tests to create a unique resource group. This is because
+		 we need to run a test in enterprise account.
+		*/
+		// ResourceGroup:          resourceGroup,
 		Prefix:                 "acc-mgmt",
 		Tags:                   []string{"test-schematic"},
 		DeleteWorkspaceOnFail:  false,
