@@ -42,7 +42,7 @@ provider "ibm" {
 }
 
 module "iam_service_access_group" {
-  source            = "terraform-ibm-modules/terraform-ibm-iam-access-group"
+  source            = "terraform-ibm-modules/iam-access-group/ibm"
   version           = "latest" # Replace "latest" with a release version to lock into a specific release
   access_group_name = "my-iam-access-group"
   dynamic_rules     = {
