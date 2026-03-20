@@ -12,18 +12,38 @@
 This module is used to create an access group, adding members to access group, defining the access group policy and adding dynamic rules to access group. Access groups can be used to define a set of permissions that you want to grant to a group of users.
 <!-- BEGIN OVERVIEW HOOK -->
 ## Overview
-* [terraform-ibm-iam-access-group](#terraform-ibm-iam-access-group)
-* [Submodules](./modules)
-    * [access-group-template](./modules/access-group-template)
-    * [access-management](./modules/access-management)
-* [Examples](./examples)
-:information_source: Ctrl/Cmd+Click or right-click on the Schematics deploy button to open in a new tab
-    * <a href="./examples/access-group-template">Access Group Template example</a> <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=iam-access-group-access-group-template-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-iam-access-group/tree/main/examples/access-group-template"><img src="https://img.shields.io/badge/Deploy%20with IBM%20Cloud%20Schematics-0f62fe?logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
-    * <a href="./examples/access-management">Access Management example</a> <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=iam-access-group-access-management-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-iam-access-group/tree/main/examples/access-management"><img src="https://img.shields.io/badge/Deploy%20with IBM%20Cloud%20Schematics-0f62fe?logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
-    * <a href="./examples/basic">Basic example</a> <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=iam-access-group-basic-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-iam-access-group/tree/main/examples/basic"><img src="https://img.shields.io/badge/Deploy%20with IBM%20Cloud%20Schematics-0f62fe?logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
-* [Deployable Architectures](./solutions)
-    * <a href="./solutions/standard">IBM Cloud Access Group solution</a>
-* [Contributing](#contributing)
+<ul>
+  <li><a href="#terraform-ibm-iam-access-group">terraform-ibm-iam-access-group</a></li>
+  <li><a href="./modules">Submodules</a>
+    <ul>
+      <li><a href="./modules/access-group-template">access-group-template</a></li>
+      <li><a href="./modules/access-management">access-management</a></li>
+    </ul>
+  </li>
+  <li><a href="./examples">Examples</a>
+    <ul>
+      <li>
+        <a href="./examples/access-group-template">Access Group Template example</a>
+        <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=iam-access-group-access-group-template-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-iam-access-group/tree/main/examples/access-group-template"><img src="https://img.shields.io/badge/Deploy%20with%20IBM%20Cloud%20Schematics-0f62fe?style=flat&logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
+      </li>
+      <li>
+        <a href="./examples/access-management">Access Management example</a>
+        <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=iam-access-group-access-management-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-iam-access-group/tree/main/examples/access-management"><img src="https://img.shields.io/badge/Deploy%20with%20IBM%20Cloud%20Schematics-0f62fe?style=flat&logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
+      </li>
+      <li>
+        <a href="./examples/basic">Basic example</a>
+        <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=iam-access-group-basic-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-iam-access-group/tree/main/examples/basic"><img src="https://img.shields.io/badge/Deploy%20with%20IBM%20Cloud%20Schematics-0f62fe?style=flat&logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
+      </li>
+    </ul>
+    ℹ️ Ctrl/Cmd+Click or right-click on the Schematics deploy button to open in a new tab.
+  </li>
+  <li><a href="./solutions">Deployable Architectures</a>
+    <ul>
+      <li><a href="./solutions/standard">IBM Cloud Access Group solution</a></li>
+    </ul>
+  </li>
+  <li><a href="#contributing">Contributing</a></li>
+</ul>
 <!-- END OVERVIEW HOOK -->
 
 ### Usage
