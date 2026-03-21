@@ -142,8 +142,6 @@ func setupTemplateOptions(t *testing.T, prefix string, dir string) *testhelper.T
 	})
 	terraformVars := map[string]interface{}{
 		"prefix": options.Prefix,
-		// Workaround for provider bug https://github.com/IBM-Cloud/terraform-provider-ibm/issues/6216
-		"account_group_ids_to_assign": []string{},
 	}
 	options.TerraformVars = terraformVars
 	return options
