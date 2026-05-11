@@ -80,9 +80,9 @@ variable "admin_observability_ag_description" {
   default     = null
 }
 
-variable "resource_tags" {
+variable "admin_observability_ag_tags" {
   type        = list(string)
-  description = "Add user resource tags to the IAM Access Group instance to organize, track, and manage costs. [Learn more](https://cloud.ibm.com/docs/account?topic=account-tag&interface=ui#tag-types)."
+  description = "The list of tags that you want to associated with your admin observability access group"
   default     = []
 }
 
@@ -193,7 +193,7 @@ variable "admin_security_ag_description" {
   default     = null
 }
 
-variable "resource_tags" {
+variable "admin_security_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your admin security access group"
   default     = []
@@ -362,7 +362,7 @@ variable "admin_network_ag_description" {
   default     = null
 }
 
-variable "resource_tags" {
+variable "admin_network_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your admin network access group"
   default     = []
@@ -510,7 +510,7 @@ variable "admin_compute_ag_description" {
   default     = null
 }
 
-variable "resource_tags" {
+variable "admin_compute_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your admin compute access group"
   default     = []
@@ -616,7 +616,7 @@ variable "privileged_observability_ag_description" {
   default     = null
 }
 
-variable "resource_tags" {
+variable "privileged_observability_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your privileged observability access group"
   default     = []
@@ -729,7 +729,7 @@ variable "privileged_security_ag_description" {
   default     = null
 }
 
-variable "resource_tags" {
+variable "privileged_security_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your privileged security access group"
   default     = []
@@ -898,7 +898,7 @@ variable "privileged_network_ag_description" {
   default     = null
 }
 
-variable "resource_tags" {
+variable "privileged_network_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your privileged network access group"
   default     = []
@@ -1046,7 +1046,7 @@ variable "privileged_compute_ag_description" {
   default     = null
 }
 
-variable "resource_tags" {
+variable "privileged_compute_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your privileged compute access group"
   default     = []
@@ -1152,7 +1152,7 @@ variable "observer_observability_ag_description" {
   default     = null
 }
 
-variable "resource_tags" {
+variable "observer_observability_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your observer observability access group"
   default     = []
@@ -1265,7 +1265,7 @@ variable "observer_security_ag_description" {
   default     = null
 }
 
-variable "resource_tags" {
+variable "observer_security_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your observer security access group"
   default     = []
@@ -1434,7 +1434,7 @@ variable "observer_network_ag_description" {
   default     = null
 }
 
-variable "resource_tags" {
+variable "observer_network_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your observer network access group"
   default     = []
@@ -1582,7 +1582,7 @@ variable "observer_compute_ag_description" {
   default     = null
 }
 
-variable "resource_tags" {
+variable "observer_compute_ag_tags" {
   type        = list(string)
   description = "The list of tags that you want to associated with your observer compute access group"
   default     = []
