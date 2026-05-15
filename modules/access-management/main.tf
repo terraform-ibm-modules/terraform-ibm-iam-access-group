@@ -144,7 +144,7 @@ module "access_groups" {
   dynamic_rules       = each.value.dynamic_rules
   add_members         = each.value.add_members
   description         = each.value.description
-  tags                = each.value.tags
+  resource_tags       = each.value.tags
   ibm_ids             = each.value.ibm_ids
   service_ids         = each.value.service_ids
   trusted_profile_ids = each.value.trusted_profile_ids
