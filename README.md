@@ -99,7 +99,7 @@ For more information, see [Creating and working with service IDs](https://cloud.
 ### Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.0 |
 | <a name="requirement_ibm"></a> [ibm](#requirement\_ibm) | >= 1.51.0, < 3.0.0 |
 
@@ -110,7 +110,7 @@ No modules.
 ### Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [ibm_iam_access_group.access_group](https://registry.terraform.io/providers/ibm-cloud/ibm/latest/docs/resources/iam_access_group) | resource |
 | [ibm_iam_access_group_dynamic_rule.access_group_dynamic_rule](https://registry.terraform.io/providers/ibm-cloud/ibm/latest/docs/resources/iam_access_group_dynamic_rule) | resource |
 | [ibm_iam_access_group_members.access_group_members](https://registry.terraform.io/providers/ibm-cloud/ibm/latest/docs/resources/iam_access_group_members) | resource |
@@ -120,7 +120,7 @@ No modules.
 ### Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_access_group_name"></a> [access\_group\_name](#input\_access\_group\_name) | Name of the access group | `string` | n/a | yes |
 | <a name="input_add_members"></a> [add\_members](#input\_add\_members) | Enable this to add members to access group | `bool` | `true` | no |
 | <a name="input_description"></a> [description](#input\_description) | Description to access group | `string` | `null` | no |
@@ -135,7 +135,7 @@ No modules.
 ### Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_dynamic_rule_ids"></a> [dynamic\_rule\_ids](#output\_dynamic\_rule\_ids) | List of access group dynamic rule IDs |
 | <a name="output_id"></a> [id](#output\_id) | The ID of the access group |
 | <a name="output_member_id"></a> [member\_id](#output\_member\_id) | The unique identifier of the access group members. |

@@ -48,7 +48,7 @@ You need the following permissions to run this module.
 ### Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.0 |
 | <a name="requirement_ibm"></a> [ibm](#requirement\_ibm) | >= 1.82.0, < 3.0.0 |
 
@@ -59,7 +59,7 @@ No modules.
 ### Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [ibm_iam_access_group_template.access_group_template_instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group_template) | resource |
 | [ibm_iam_access_group_template_assignment.access_group_template_assignment_instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group_template_assignment) | resource |
 | [ibm_iam_policy_template.access_group_template_policies](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_policy_template) | resource |
@@ -70,7 +70,7 @@ No modules.
 ### Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_access_group_description"></a> [access\_group\_description](#input\_access\_group\_description) | Description of the access group to be created from the template | `string` | `null` | no |
 | <a name="input_access_group_name"></a> [access\_group\_name](#input\_access\_group\_name) | Name of the access group to be created from the template | `string` | n/a | yes |
 | <a name="input_account_group_ids_to_assign"></a> [account\_group\_ids\_to\_assign](#input\_account\_group\_ids\_to\_assign) | A list of account group IDs to assign the template to. Support passing the string 'all' in the list to assign to all account groups. | `list(string)` | <pre>[<br/>  "all"<br/>]</pre> | no |
@@ -84,7 +84,7 @@ No modules.
 ### Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_access_group_template_id"></a> [access\_group\_template\_id](#output\_access\_group\_template\_id) | The ID of the created access group template |
 | <a name="output_access_group_template_version"></a> [access\_group\_template\_version](#output\_access\_group\_template\_version) | The version of the created access group template |
 | <a name="output_assigned_targets"></a> [assigned\_targets](#output\_assigned\_targets) | List of assignment IDs to target accounts |

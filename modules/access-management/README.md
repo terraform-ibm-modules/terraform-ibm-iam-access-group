@@ -14,14 +14,14 @@ A module that will provision the following:
 ### Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.0 |
 | <a name="requirement_ibm"></a> [ibm](#requirement\_ibm) | >= 1.66.0 |
 
 ### Modules
 
 | Name | Source | Version |
-|------|--------|---------|
+| ---- | ------ | ------- |
 | <a name="module_access_groups"></a> [access\_groups](#module\_access\_groups) | ../.. | n/a |
 
 ### Resources
@@ -31,7 +31,7 @@ No resources.
 ### Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_admin_compute_ag_add_members"></a> [admin\_compute\_ag\_add\_members](#input\_admin\_compute\_ag\_add\_members) | Enable this to add members to the admin compute group | `bool` | `false` | no |
 | <a name="input_admin_compute_ag_description"></a> [admin\_compute\_ag\_description](#input\_admin\_compute\_ag\_description) | Description of the admin compute access group | `string` | `null` | no |
 | <a name="input_admin_compute_ag_dynamic_rules"></a> [admin\_compute\_ag\_dynamic\_rules](#input\_admin\_compute\_ag\_dynamic\_rules) | A map of dynamic rules for the admin compute access group | <pre>map(object({<br/>    expiration        = number<br/>    identity_provider = string<br/>    conditions = list(object({<br/>      claim    = string<br/>      operator = string<br/>      value    = string<br/>    }))<br/>  }))</pre> | `{}` | no |
@@ -144,6 +144,6 @@ No resources.
 ### Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_access_groups"></a> [access\_groups](#output\_access\_groups) | Access Groups |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
