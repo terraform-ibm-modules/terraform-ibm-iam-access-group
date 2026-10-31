@@ -136,13 +136,6 @@ variable "admin_security_ag_policies" {
   }))
   description = "A map of policies for the Administrator Security access group, has a set of default policies that can be overridden"
   default = {
-    "hs-crypto" = {
-      roles = ["Administrator", "Manager", "Certificate Manager", "Vault Administrator", "Key Custodian - Creator", "Key Custodian - Deployer", "KMS Key Purge Role"]
-      resources = [{
-        service = "hs-crypto"
-      }]
-      tags = []
-    }
     "kms" = {
       roles = ["Manager"]
       resources = [{
@@ -672,13 +665,6 @@ variable "privileged_security_ag_policies" {
   }))
   description = "A map of policies for the Privileged Security access group, has a set of default policies that can be overridden"
   default = {
-    "hs-crypto" = {
-      roles = ["Editor", "Writer"]
-      resources = [{
-        service = "hs-crypto"
-      }]
-      tags = []
-    }
     "kms" = {
       roles = ["Writer"]
       resources = [{
@@ -1208,13 +1194,6 @@ variable "observer_security_ag_policies" {
   }))
   description = "A map of policies for the Observer Security access group, has a set of default policies that can be overridden"
   default = {
-    "hs-crypto" = {
-      roles = ["Viewer", "Reader"]
-      resources = [{
-        service = "hs-crypto"
-      }]
-      tags = []
-    }
     "kms" = {
       roles = ["Reader"]
       resources = [{
